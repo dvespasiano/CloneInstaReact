@@ -6,7 +6,7 @@ const upload = multer(uploadConfig);
 const uploadConfig = required('./controllers/PostController');
 const likeController = required('./controllers/LikeController.js');
 
-modules.exports = routes;
+module.exports = routes;
 
 routes.get('/posts', PostController.index);
 routes.post('/posts', upload.single('image'), PostController.store);
